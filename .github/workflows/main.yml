@@ -31,10 +31,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest toml
 
-      - name: Install wokwi-cli
-        run: |
-          wget -q -O /usr/local/bin/wokwi-cli https://raw.githubusercontent.com/rafaelcorsi/wokwi-cli/main/scripts/install.sh
-          chmod +x /usr/local/bin/wokwi-cli
+#      - name: Install wokwi-cli
+#        run: |
+#          wget -q -O /usr/local/bin/wokwi-cli https://raw.githubusercontent.com/rafaelcorsi/wokwi-cli/main/scripts/install.sh
+#          chmod +x /usr/local/bin/wokwi-cli
 
       - name: Download build artifact
         uses: actions/download-artifact@v4
@@ -42,12 +42,17 @@ jobs:
           name: build-folder
           path: build
 
-      - name: Setup tmate session
-        env:
-          WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
-        uses: mxschmitt/action-tmate@v3
+#      - name: Setup tmate session
+#        env:
+#          WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
+#        uses: mxschmitt/action-tmate@v3
 
-      - name: run test
+      - name: Test with Wokwi
+        uses: wokwi/wokwi-ci-action@v1
+        with:
+          token: ${{ secrets.WOKWI_CLI_TOKEN }}
+
+      - name: Run test
         env:
           WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
         run: |
