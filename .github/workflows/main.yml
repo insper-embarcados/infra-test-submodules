@@ -10,13 +10,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: insper-embarcados/pico-build@v0
+      
+      - name: Upload firmware exe1
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-folder
+          path: build/
 
   test:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v3
         with:
           python-version: "3.8"
 
@@ -29,6 +35,12 @@ jobs:
         run: |
           wget -q -O /usr/local/bin/wokwi-cli https://raw.githubusercontent.com/rafaelcorsi/wokwi-cli/main/scripts/install.sh
           chmod +x /usr/local/bin/wokwi-cli
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-folder
+          path: build
 
       - name: Setup tmate session
         env:
