@@ -30,4 +30,4 @@ if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
 endif()
 
 # Codes subdir:
-add_subdirectory(test)
+add_subdirectory(main)
