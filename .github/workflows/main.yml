@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: insper-embarcados/pico-build@v8
+      - uses: insper-embarcados/pico-build@v9
 
       
