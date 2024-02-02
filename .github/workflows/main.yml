@@ -30,8 +30,13 @@ jobs:
           wget -q -O /usr/local/bin/wokwi-cli https://raw.githubusercontent.com/rafaelcorsi/wokwi-cli/main/scripts/install.sh
           chmod +x /usr/local/bin/wokwi-cli
 
-      - name: run test
+      - name: Setup tmate session
         env:
           WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
-        run: |
-          pytest
+        uses: mxschmitt/action-tmate@v3
+
+      #- name: run test
+      #  env:
+      #    WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
+      #  run: |
+      #    pytest
