@@ -1,7 +1,8 @@
 {
   "tests": [
     {
-      "name": "infra",
+      "name": "main",
+      "setup": "sudo ./setup.sh"
       "run": "pytest test.py",
       "input": "",
       "output": "",
