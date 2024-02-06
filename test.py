@@ -49,7 +49,7 @@ def run_build(name):
 
 
 def run_test(name):
-    run_build(name)
+    #run_build(name)
     gen_wokwi_toml(name)
     copy_files(name)
     os.chdir(test_folder)
