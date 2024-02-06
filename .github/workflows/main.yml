@@ -20,6 +20,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: build
+    env:
+      WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v3
