@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "main",
-      "setup": "sudo ./setup.sh",
+      "setup": "sh ./setup.sh",
       "run": "pytest test.py",
       "input": "",
       "output": "",
