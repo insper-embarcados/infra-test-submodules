@@ -31,10 +31,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest toml
 
-#      - name: Install wokwi-cli
-#        run: |
-#          wget -q -O /usr/local/bin/wokwi-cli https://raw.githubusercontent.com/rafaelcorsi/wokwi-cli/main/scripts/install.sh
-#          chmod +x /usr/local/bin/wokwi-cli
+      - name: Install wokwi-cli
+        run: |
+          wget -q -O /usr/local/bin/wokwi-cli https://raw.githubusercontent.com/rafaelcorsi/wokwi-cli/main/scripts/install.sh
+          chmod +x /usr/local/bin/wokwi-cli
 
       - name: Download build artifact
         uses: actions/download-artifact@v4
