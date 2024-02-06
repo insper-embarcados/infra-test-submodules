@@ -47,10 +47,10 @@ jobs:
 #          WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
 #        uses: mxschmitt/action-tmate@v3
 
-      - name: Test with Wokwi
-        uses: wokwi/wokwi-ci-action@v1
-        with:
-          token: ${{ secrets.WOKWI_CLI_TOKEN }}
+#      - name: Test with Wokwi
+#        uses: wokwi/wokwi-ci-action@v1
+#        with:
+#          token: ${{ secrets.WOKWI_CLI_TOKEN }}
 
       - name: Run test
         env:
