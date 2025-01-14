@@ -1,0 +1,3 @@
+[submodule "container-essencials"]
+	path = container-essencials
+	url = git@github.com:insper-embarcados/container-essentials.git
