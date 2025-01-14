@@ -6,9 +6,9 @@
       {
         "label": "Run npm webpack on startup",
         "type": "shell",
-        "command": "git submodule init && git submodule add git@github.com:insper-embarcados/container-essencials.git container-essencials && git pull --recurse-submodules",
+        "command": "git submodule init && git submodule add git@github.com:insper-embarcados/container-essentials.git container-essentials && git pull --recurse-submodules",
         "windows": {
-          "command": "git submodule init && git submodule add git@github.com:insper-embarcados/container-essencials.git container-essencials && git pull --recurse-submodules"
+          "command": "git submodule init && git submodule add git@github.com:insper-embarcados/container-essentials.git container-essentials && git pull --recurse-submodules"
         },
         "presentation": {
           "reveal": "always",
