@@ -7,7 +7,9 @@
         "name": "🔼 Open Container",
         "color": "green",
         // pull and open container in devcontainer
-        "command": "git submodule add git@github.com:insper-embarcados/container-essentials.git container-essentials && git pull --recurse-submodules && devcontainer up --workspace-folder container-essentials",
+        "command": "workbench.action.tasks.runTask",
+        "args": ["open-container"],
+        "useVsCodeApi": true
       },
       
     ]

@@ -1,0 +1,8 @@
+{ "tasks": [
+    {
+        "label": "open-container",
+        "type": "shell",
+        "command": "cd ${workspaceFolder} &&  git submodule add git@github.com:insper-embarcados/container-essentials.git container-essentials || git pull --recurse-submodules"
+    }
+]
+}
