@@ -4,3 +4,6 @@
 [submodule "container-essentials-infra-test-submodules"]
 	path = container-essentials-infra-test-submodules
 	url = git@github.com:insper-embarcados/container-essentials.git
+[submodule "container-essentials-infra-test-submodules}"]
+	path = container-essentials-infra-test-submodules}
+	url = git@github.com:insper-embarcados/container-essentials.git
