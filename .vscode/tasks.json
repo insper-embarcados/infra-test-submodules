@@ -1,0 +1,20 @@
+// pulling container-essentials
+
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run npm webpack on startup",
+        "type": "shell",
+        "command": "git pull --recurse-submodules",
+        "windows": {
+          "command": "git pull --recurse-submodules"
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        },
+        "runOptions": { "runOn": "folderOpen" }
+      }
+    ]
+  }
