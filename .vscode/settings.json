@@ -1,0 +1,16 @@
+{"actionButtons": {
+    "defaultColor": "#ff0034", // Can also use string color names.
+    "loadNpmCommands": true, // Disables automatic generation of actions for npm commands.
+    "reloadButton": "Reload", // Custom reload button text or icon (default ↻). null value enables automatic reload on configuration change
+    "commands": [
+      {
+        "name": "🔼 Open Container",
+        "color": "green",
+        // pull and open container in devcontainer
+        "command": "git submodule add git@github.com:insper-embarcados/container-essentials.git container-essentials && git pull --recurse-submodules && devcontainer up --workspace-folder container-essentials",
+      },
+      
+    ]
+  }
+
+}
